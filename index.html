@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora SHA-256</title>
+	<link rel="shortcut icon" href="https://lh3.googleusercontent.com/drive-viewer/AITFw-wE_qzFeGqWzK_p0KBqlyZCGrA75r8m3rScRb0G-riKJghHguerQGwTyzLURB8T5mZhm_vO3wDOx_viGQ87tZ2Y3vGQyg=s2560">
+    <meta name="author" content="Miguel Santiago Kremzky">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AITFw-x4m-GN16aeRjHuv5jtGGr3IA29XeA8Hm9SCpbiBglrENUHdJp8hTLM7W9xcWYMNra9CBb6n-4vG2GfnU5MrbMqibEx=s1600');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+        }
+
+        .header img {
+            width: 80px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        .info-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 920px;
+            text-align: center;
+        }
+
+        .info-container h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+            text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+        }
+
+        .info-container p {
+            line-height: 1.5;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .image_1 {
+            width: 80px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 auto;
+            max-width: 920px;
+            text-align: center;
+        }
+
+        .result {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .result p {
+            line-height: 1.2;
+            margin: 5px;
+        }
+
+        .button-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .button-text {
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .area-division {
+            font-style: italic;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+        }
+
+        .container button {
+            margin-right: 10px;
+            max-width: 172px;
+            margin: 0 auto;
+        }
+        
+        h1, p {
+            line-height: 0.1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="image_1">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-zyXS0pc-Zg9XYgWL-0Rd7hJyjjXbzrXL6TieIoZfkCp-m4IrWo_KKwg1YLbEIYtVrjR_UrUWwuSQ_doyniPp4ejLAu8A=s2560" alt="Logo_1">
+        </div>
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-ygwV4UUs-pcnuqBX8sP2IBTq5vTAGvVmTw-aahEbunNMdZHIEpbaopqnyqi44vkkL1ozhzg04rVbcQcB5KAFuNjywYIw=s2560" alt="Logo_2">
+        <h1>Calculadora Algorítmica SHA-256</h1>
+        <p>Versión 2.5 (beta)</p>
+        <div class="area-division">Área Informática - División Criminalística Villaguay</div>
+    </header>
+    <div class="info-container">
+        <h2>La importancia de usar esta herramienta web en el ámbito de la informática forense.</h2>
+        <p style="text-align: justify;">El uso de una herramienta web como la <b>Calculadora Algorítmica SHA-256</b> en informática forense es crucial por las siguientes razones:</p>
+        <p style="text-align: justify;"><b>Veracidad de la Evidencia:</b> En informática forense, la evidencia digital es esencial para investigar delitos cibernéticos y casos relacionados con tecnología. Esta herramienta garantiza la integridad y autenticidad de los datos, lo que es esencial para que la evidencia sea aceptada en un tribunal.</p>
+        <p style="text-align: justify;"><b>Detección de Alteraciones:</b> Permite detectar cualquier alteración o manipulación de archivos digitales. Los valores hash SHA-256 son únicos para cada archivo, por lo que cualquier cambio, incluso menor, se reflejará en un hash diferente. Esto es crucial para identificar intentos de encubrimiento o alteración de pruebas.</p>
+        <p style="text-align: justify;"><b>Reconstrucción de Actividades: </b>Facilita la reconstrucción de actividades digitales. Los valores hash proporcionan un registro de la historia de los archivos, lo que permite rastrear cambios, transferencias y acciones realizadas en un sistema o dispositivo digital.</p>
+        <p style="text-align: justify;"><b>Validación de Copias de Seguridad:</b> En la recuperación de datos y la restauración de sistemas, la herramienta se utiliza para verificar la integridad de las copias de seguridad y garantizar que los datos restaurados sean idénticos a los originales.</p>
+        <p style="text-align: justify;"><b>Cumplimiento Legal:</b> Cumple con los requisitos legales al proporcionar pruebas sólidas de integridad y autenticidad de la evidencia digital. Esto es esencial para garantizar que las investigaciones y los resultados forenses sean admisibles en un tribunal de justicia.</p>
+        <p style="text-align: justify;"><b>Protección de la Cadena de Custodia:</b> Ayuda a mantener la cadena de custodia de la evidencia digital. Los valores hash se utilizan para documentar y verificar quién ha tenido acceso a la evidencia y cuándo.</p>
+        <p style="text-align: justify;">En resumen, el uso de esta herramienta web en informática forense es esencial para preservar la integridad de la evidencia digital, detectar manipulaciones, reconstruir actividades y garantizar el cumplimiento legal, lo que contribuye a investigaciones precisas y exitosas en el ámbito de la seguridad cibernética y la ley.</p>
+    </div>
+    <div class="container">
+        <input type="file" id="fileInput" multiple>
+        <button onclick="calculateHashes()"><i class="fas fa-calculator button-icon"></i><span class="button-text">Calcular Hashes</span></button>
+        <button onclick="downloadResults()"><i class="fas fa-download button-icon"></i><span class="button-text">Descargar Resultados</span></button>
+        <div id="hashResults"></div>
+    </div>
+    <script>
+        const calculatedHashes = [];
+
+async function calculateHashes() {
+    const fileInput = document.getElementById('fileInput');
+    const hashResults = document.getElementById('hashResults');
+
+    for (const file of fileInput.files) {
+        const reader = new FileReader();
+
+        reader.onload = async function(event) {
+            const dataBuffer = event.target.result;
+            const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+
+            const currentDate = new Date();
+            currentDate.setUTCHours(currentDate.getUTCHours() - 3);
+            const formattedDate = currentDate.toISOString();
+
+            const fileInfo = {
+                filename: file.name,
+                datetime: formattedDate,
+                hash: hashHex
+            };
+
+            calculatedHashes.push(fileInfo);
+
+            const resultElement = document.createElement('div');
+            resultElement.classList.add('result');
+            resultElement.innerHTML = `
+                <p><b>Nombre de archivo:</b> ${fileInfo.filename}</p>
+                <p><b>Fecha y Hora (UTC-3):</b> ${fileInfo.datetime}</p>
+                <p><span style="color: #007bff;"><b>Hash SHA-256:</b> ${fileInfo.hash}</span></p>
+            `;
+            hashResults.appendChild(resultElement);
+        };
+
+        reader.readAsArrayBuffer(file);
+    }
+}
+
+        function downloadResults() {
+            if (calculatedHashes.length === 0) {
+                alert('No hay resultados para descargar.');
+                return;
+            }
+
+            const resultsText = calculatedHashes.map(item => `
+                Nombre de archivo: ${item.filename}
+                Fecha y Hora (UTC-3): ${item.datetime}
+                Hash SHA-256: ${item.hash}
+                ------------------------------------------
+            `).join('\n');
+
+            const blob = new Blob([resultsText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Resultados_SHA-256.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
