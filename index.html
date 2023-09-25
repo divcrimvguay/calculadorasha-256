@@ -144,10 +144,10 @@
             text-align: center;
             border-radius: 5px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-			display: inline-block;
-			position: relative;
-			top: 50%;
-			Transform: translateY(-50%);
+            display: inline-block;
+            position: relative;
+            top: 50%;
+            Transform: translateY(-50%);
         }
 
         .modal-button {
@@ -207,13 +207,11 @@
 
         for (const file of fileInput.files) {
             const reader = new FileReader();
-
             reader.onload = async function(event) {
                 const dataBuffer = event.target.result;
                 const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
                 const hashArray = Array.from(new Uint8Array(hashBuffer));
                 const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-
                 const currentDate = new Date();
                 currentDate.setUTCHours(currentDate.getUTCHours() - 3);
                 const formattedDate = currentDate.toISOString();
@@ -261,7 +259,6 @@
             Hash SHA-256: ${item.hash}
             ------------------------------------------
         `).join('\n');
-
         const blob = new Blob([resultsText], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
