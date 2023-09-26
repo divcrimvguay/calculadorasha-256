@@ -4,172 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora SHA-256</title>
-	<link rel="shortcut icon" href="https://lh3.googleusercontent.com/drive-viewer/AITFw-wE_qzFeGqWzK_p0KBqlyZCGrA75r8m3rScRb0G-riKJghHguerQGwTyzLURB8T5mZhm_vO3wDOx_viGQ87tZ2Y3vGQyg=s2560">
+	<link rel="shortcut icon" href="favicon.png">
     <meta name="author" content="Miguel Santiago Kremzky">
+	<link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <style>
-        body {
-            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AITFw-x4m-GN16aeRjHuv5jtGGr3IA29XeA8Hm9SCpbiBglrENUHdJp8hTLM7W9xcWYMNra9CBb6n-4vG2GfnU5MrbMqibEx=s1600');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-color: #333;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
-        }
-
-        .header img {
-            width: 80px;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            border-radius: 50%;
-        }
-
-        .info-container {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 20px auto;
-            max-width: 920px;
-            text-align: center;
-        }
-
-        .info-container h2 {
-            font-size: 20px;
-            margin: 0 0 10px;
-            text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
-        }
-
-        .info-container p {
-            line-height: 1.5;
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .image_1 {
-            width: 80px;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 40px;
-            transform: translateY(-50%);
-            border-radius: 50%;
-        }
-
-        .container {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 0 auto;
-            max-width: 920px;
-            text-align: center;
-        }
-
-        .result {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px 0;
-            text-align: left;
-            margin-bottom: 10px;
-        }
-
-        .result p {
-            line-height: 1.2;
-            margin: 5px;
-        }
-
-        .button-icon {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .button-text {
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-
-        .area-division {
-            font-style: italic;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
-        }
-
-        .container button {
-            margin-right: 10px;
-            max-width: 172px;
-            margin: 0 auto;
-        }
-        
-        h1, p {
-            line-height: 0.1;
-        }
-
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-        }
-
-        .modal-content {
-            background-color: black;
-            color: white;
-            padding: 20px;
-            max-width: 340px;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            position: relative;
-            top: 50%;
-            Transform: translateY(-50%);
-        }
-
-        .modal-button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-    </style>
 </head>
 <body>
     <header class="header">
         <div class="image_1">
-            <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-zyXS0pc-Zg9XYgWL-0Rd7hJyjjXbzrXL6TieIoZfkCp-m4IrWo_KKwg1YLbEIYtVrjR_UrUWwuSQ_doyniPp4ejLAu8A=s2560" alt="Logo_1">
+            <img src="logo_1.png" alt="Logo_1">
         </div>
-        <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-ygwV4UUs-pcnuqBX8sP2IBTq5vTAGvVmTw-aahEbunNMdZHIEpbaopqnyqi44vkkL1ozhzg04rVbcQcB5KAFuNjywYIw=s2560" alt="Logo_2">
+            <img src="logo_2.png" alt="Logo_2">
         <h1>Calculadora Algorítmica SHA-256</h1>
-        <p>Versión 2.5.4 (beta)</p>
-        <div class="area-division">Policía de Entre Ríos - División Criminalística Villaguay</div>
+        <p>Versión 2.5.7 (beta)</p>
+        <div class="prov-division">Policía de Entre Ríos - División Criminalística Villaguay</div>
     </header>
     <div class="info-container">
         <h2>La importancia de usar esta herramienta web en el ámbito de la informática forense.</h2>
@@ -195,89 +43,6 @@
             </div>
         </div>
     </div>
-    <script>
-    const calculatedHashes = [];
-    async function calculateHashes() {
-        const fileInput = document.getElementById('fileInput');
-        const hashResults = document.getElementById('hashResults');
-        if (fileInput.files.length === 0) {
-            alert('Por favor, selecciona al menos un archivo para calcular los hashes.');
-            return;
-        }
-
-        for (const file of fileInput.files) {
-            const reader = new FileReader();
-            reader.onload = async function(event) {
-                const dataBuffer = event.target.result;
-                const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
-                const hashArray = Array.from(new Uint8Array(hashBuffer));
-                const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-                const currentDate = new Date();
-                currentDate.setUTCHours(currentDate.getUTCHours() - 3);
-                const formattedDate = currentDate.toISOString();
-                const fileInfo = {
-                    filename: file.name,
-                    datetime: formattedDate,
-                    hash: hashHex
-                };
-
-                calculatedHashes.push(fileInfo);
-
-                const resultElement = document.createElement('div');
-                resultElement.classList.add('result');
-                resultElement.innerHTML = `
-                    <p><b>Nombre de archivo:</b> ${fileInfo.filename}</p>
-                    <p><b>Fecha y Hora (UTC-3):</b> ${fileInfo.datetime}</p>
-                    <p><span style="color: #007bff;"><b>Hash SHA-256:</b> ${fileInfo.hash}</span></p>
-                `;
-                hashResults.appendChild(resultElement);
-            };
-
-            reader.readAsArrayBuffer(file);
-        }
-
-        showSuccessModal();
-    }
-
-     function showSuccessModal() {
-        document.getElementById('successModal').style.display = 'block';
-    }
-
-    function closeModal() {
-        document.getElementById('successModal').style.display = 'none';
-    }
-
-    function downloadResults() {
-        if (calculatedHashes.length === 0) {
-            alert('No hay resultados para descargar.');
-            return;
-        }
-
-        const resultsText = calculatedHashes.map(item => `
-            Nombre de archivo: ${item.filename}
-            Fecha y Hora (UTC-3): ${item.datetime}
-            Hash SHA-256: ${item.hash}
-            ------------------------------------------
-        `).join('\n');
-        const blob = new Blob([resultsText], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Resultados_SHA-256.txt';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
-
-        function clearResults() {
-            const hashResults = document.getElementById('hashResults');
-            hashResults.innerHTML = '';
-            calculatedHashes.length = 0;
-            const fileInput = document.getElementById('fileInput');
-            fileInput.value = '';
-        }
-		
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
