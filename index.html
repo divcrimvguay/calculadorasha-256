@@ -16,7 +16,7 @@
         </div>
             <img src="logo_2.png" alt="Logo_2">
         <h1>Calculadora Algorítmica SHA-256</h1>
-        <p>Versión 2.5.7 (beta)</p>
+        <p>Versión 2.5.8 (beta)</p>
         <div class="prov-division">Policía de Entre Ríos - División Criminalística Villaguay</div>
     </header>
     <div class="info-container">
@@ -30,6 +30,15 @@
         <p style="text-align: justify;"><b>Protección de la Cadena de Custodia:</b> Ayuda a mantener la cadena de custodia de la evidencia digital. Los valores hash se utilizan para documentar y verificar quién ha tenido acceso a la evidencia y cuándo.</p>
         <p style="text-align: justify;">En resumen, el uso de esta herramienta web en informática forense es esencial para preservar la integridad de la evidencia digital, detectar manipulaciones, reconstruir actividades y garantizar el cumplimiento legal, lo que contribuye a investigaciones precisas y exitosas en el ámbito de la seguridad cibernética y la ley.</p>
     </div>
+
+<div id="warningModal" class="modal" style="display: none">
+    <div class="modal-content">
+        <span class="warning-icon">⚠️</span>
+        <p style="font-size: 16px; line-height: 1.5;">¡ADVERTENCIA! El procesamiento de archivos muy grandes puede tardar más de lo esperado.</p>
+        <button class="modal-button" onclick="closeWarningModal()">Aceptar</button>
+    </div>
+</div>
+
     <div class="container">
         <input type="file" id="fileInput" multiple>
         <button onclick="calculateHashes()"><i class="fas fa-calculator button-icon"></i><span class="button-text">Calcular Hashes</span></button>
