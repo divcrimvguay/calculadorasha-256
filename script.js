@@ -1,4 +1,5 @@
 const calculatedHashes = [];
+
 async function calculateHashes() {
     const fileInput = document.getElementById('fileInput');
     const hashResults = document.getElementById('hashResults');
@@ -7,30 +8,38 @@ async function calculateHashes() {
         return;
     }
 
+    showWarningModal();
+
+    await new Promise(resolve => {
+        const modalButton = document.querySelector('#warningModal button');
+        modalButton.addEventListener('click', () => {
+            resolve();
+        });
+    });
+
     for (const file of fileInput.files) {
         const reader = new FileReader();
 
         await new Promise(resolve => {
             reader.onload = async function(event) {
+                const dataBuffer = event.target.result;
+                const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+                const fileInfo = {
+                    filename: file.name,
+                    hash: hashHex
+                };
 
-            const dataBuffer = event.target.result;
-            const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-            const fileInfo = {
-                filename: file.name,
-                hash: hashHex
-            };
+                calculatedHashes.push(fileInfo);
 
-            calculatedHashes.push(fileInfo);
-
-            const resultElement = document.createElement('div');
-            resultElement.classList.add('result');
-            resultElement.innerHTML = `
-                <p><b>Nombre de archivo (.ext):</b> ${fileInfo.filename}</p>
-                <p><span style="color: #007bff;"><b>Hash SHA-256:</b> ${fileInfo.hash}</span></p>
-            `;
-              hashResults.appendChild(resultElement);
+                const resultElement = document.createElement('div');
+                resultElement.classList.add('result');
+                resultElement.innerHTML = `
+                    <p><b>Nombre de archivo (.ext):</b> ${fileInfo.filename}</p>
+                    <p><span style="color: #007bff;"><b>Hash SHA-256:</b> ${fileInfo.hash}</span></p>
+                `;
+                hashResults.appendChild(resultElement);
                 resolve();
             };
 
@@ -39,6 +48,14 @@ async function calculateHashes() {
     }
 
     showSuccessModal();
+}
+
+function showWarningModal() {
+    document.getElementById('warningModal').style.display = 'block';
+}
+
+function closeWarningModal() {
+    document.getElementById('warningModal').style.display = 'none';
 }
 
 function showSuccessModal() {
@@ -69,7 +86,7 @@ Hash SHA-256: ${item.hash}
     const dateAndTimeInfo = `
 
 -----------------------------------------------
-Calculadora Algorítmica SHA-256 v2.5.7
+Calculadora Algorítmica SHA-256 v2.5.8
 Fecha y Hora de creación: ${formattedDate} ${formattedTime}
 -----------------------------------------------
 `;
