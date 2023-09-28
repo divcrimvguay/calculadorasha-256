@@ -166,9 +166,9 @@ body {
     }
 
     #warningModal .warning-icon img {
-        width: 40px; /* Ancho deseado para la imagen */
-        height: auto; /* Altura ajustada automáticamente */
-        margin-bottom: -10px; /* Cambia el valor para ajustar la distancia */
+        width: 40px;
+        height: auto;
+        margin-bottom: -10px;
     }
 
     #warningModal .modal-button {
