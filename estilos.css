@@ -1,4 +1,4 @@
-    body {
+body {
         background-image: url('background.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -135,9 +135,10 @@
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         display: inline-block;
-        position: relative;
+        position: fixed;
         top: 50%;
-        Transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .modal-button {
@@ -148,3 +149,32 @@
         border-radius: 5px;
         cursor: pointer;
     }
+
+#warningModal .modal-content {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    max-width: 340px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#warningModal .warning-icon {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+#warningModal .modal-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
