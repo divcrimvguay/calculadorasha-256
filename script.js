@@ -89,9 +89,7 @@ function downloadResults() {
     const formattedDate = currentDateArgentina.toLocaleDateString();
     const formattedTime = currentDateArgentina.toLocaleTimeString();
 
-    const resultsText = calculatedHashes.map(item => `Nombre de archivo (.ext): ${item.filename}
-Hash SHA-256: ${item.hash}
------------------------------------------------
+    const resultsText = calculatedHashes.map(item => `Nombre de archivo (.ext): ${item.filename}\nHash SHA-256: ${item.hash}\n-----------------------------------------------
 `).join('\n');
 
     const dateAndTimeInfo = `
