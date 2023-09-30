@@ -89,14 +89,17 @@ function downloadResults() {
     const formattedDate = currentDateArgentina.toLocaleDateString();
     const formattedTime = currentDateArgentina.toLocaleTimeString();
 
-    const resultsText = calculatedHashes.map(item => `Nombre de archivo (.ext): ${item.filename}\nHash SHA-256: ${item.hash}\n-----------------------------------------------
-`).join('\n');
+    const resultsText = calculatedHashes.map(item => `Nombre de archivo (.ext): ${item.filename}\r
+Hash SHA-256: ${item.hash}\r
+-----------------------------------------------\r
+`).join('\r');
 
-    const dateAndTimeInfo = `
-
------------------------------------------------
-Calculadora Algorítmica SHA-256 v2.5.9
-Fecha y Hora de creación: ${formattedDate} ${formattedTime}
+    const dateAndTimeInfo = `\r
+\r
+-----------------------------------------------\r
+Policía de Entre Ríos\r
+Calculadora Algorítmica SHA-256 v2.5.9\r
+Fecha y Hora de creación: ${formattedDate} ${formattedTime}\r
 -----------------------------------------------
 `;
 
