@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora SHA-256</title>
 	<link rel="shortcut icon" href="favicon.png">
-    <meta name="author" content="Miguel Santiago Kremzky">
+    <meta name="author" content="Miguel Santiago Kremzky (Auditor/Técnico/Programador en Redes y Sistemas Informáticos - Perito en Informática Forense - Especialista en Ciberseguridad)">
 	<link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <div class="image_1">
-            <img src="logo_1.png" alt="Logo_1">
+            <img src="logo_1.png" alt="Escudo Policía de Entre Ríos">
         </div>
-            <img src="logo_2.png" alt="Logo_2">
+            <img src="logo_2.png" alt="Escudo División Criminalística Villaguay">
         <h1>Calculadora Algorítmica SHA-256</h1>
-        <p>Versión 2.5.9 (beta)</p>
-        <div class="prov-division">Policía de Entre Ríos - División Criminalística Villaguay</div>
+        <p>Versión 2.6 (beta)</p>
+        <div class="prov_div">Policía de Entre Ríos - División Criminalística Villaguay</div>
     </header>
     <div class="info-container">
         <h2>La importancia de usar esta herramienta web en el ámbito de la informática forense.</h2>
@@ -33,7 +33,7 @@
     <div id="warningModal" class="modal" style="display: none">
         <div class="modal-content">
             <span class="warning-icon">
-                <img src="warning.png" alt="Advertencia">
+                <img src="warning.png" alt="¡Advertencia!">
             </span>
             <p style="font-size: 16px; line-height: 1.5;">¡ADVERTENCIA! Los cálculos pueden tardar más de lo esperado en archivos grandes.</p>
             <button class="modal-button" onclick="closeWarningModal()">Aceptar</button>
@@ -42,7 +42,7 @@
     <div id="loadingModal" class="modal" style="display: none">
         <div class="modal-content">
             <span class="loading-icon">
-                <img src="loading.gif" alt="Cargando">
+                <img src="loading.gif" alt="Calculando hashes...">
             </span>
             <p style="font-size: 16px; line-height: 1.5;">Calculando hashes, por favor espere...</p>
         </div>
@@ -50,7 +50,7 @@
     <div class="container">
         <input type="file" id="fileInput" multiple>
         <button onclick="calculateHashes()"><i class="fas fa-calculator button-icon"></i><span class="button-text">Calcular Hashes</span></button>
-        <button onclick="downloadResults()"><i class="fas fa-download button-icon"></i><span class="button-text">Descargar Resultados</span></button>
+        <button onclick="downloadResults()"><i class="fas fa-download button-icon"></i><span class="button-text">Descargar Reporte</span></button>
         <button onclick="clearResults()"><i class="fas fa-trash button-icon"></i><span class="button-text">Borrar Resultados</span></button>
         <div id="hashResults"></div>
         <div id="successModal" class="modal" style="display: none">
