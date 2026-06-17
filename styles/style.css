@@ -1,0 +1,128 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== MODAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    max-width: 580px;
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-content a {
+    color: #5bc0de;
+    text-decoration: underline;
+}
+
+.modal-content a:hover {
+    color: #31b0d5;
+}
+
+.warning-icon img {
+    width: 45px;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+/* ===== CÓDIGO QR ===== */
+.qr-image {
+    width: 120px;
+    height: auto;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.qr-image:hover {
+    opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets en vertical y celulares grandes (600px - 900px) */
+@media only screen and (max-width: 900px) {
+    .modal-content {
+        font-size: 15px;
+        max-width: 500px;
+        padding: 18px;
+    }
+    .warning-icon img {
+        width: 40px;
+    }
+    .qr-image {
+        width: 110px;
+    }
+}
+
+/* Tablets pequeñas y celulares grandes (600px - 768px) */
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        font-size: 14px;
+        max-width: 420px;
+        padding: 16px;
+    }
+    .warning-icon img {
+        width: 38px;
+    }
+    .qr-image {
+        width: 100px;
+    }
+}
+
+/* Celulares (320px - 600px) */
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        font-size: 13px;
+        max-width: 360px;
+        padding: 14px;
+    }
+    .warning-icon img {
+        width: 35px;
+    }
+    .qr-image {
+        width: 100px;
+    }
+}
+
+/* Celulares pequeños (320px - 480px) */
+@media only screen and (max-width: 480px) {
+    .modal-content {
+        font-size: 12px;
+        max-width: 300px;
+        padding: 12px;
+    }
+    .warning-icon img {
+        width: 30px;
+    }
+    .qr-image {
+        width: 90px;
+    }
+}
